@@ -1,14 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<h1>CREATE</h1>
+<h1>EDIT BOOK</h1>
 <section class="container">
-    <form action="{{ url_for('bookCreate') }}" method="POST" class="book-form">
+    <form action="{{ url_for('bookEdit', book_id=book.id) }}" method="POST" class="book-form">
         <label for="title">Title</label><br>
-        <input type="text" name="title" class="form-input" required><br>
+        <input type="text" name="title" class="form-input" value="{{ book.title }}" required><br>
+        
         <label for="author">Author</label><br>
-        <input type="text" name="author" class="form-input" required><br>
-        <input type="submit" value="Submit" class="submit-button">
+        <input type="text" name="author" class="form-input" value="{{ book.author }}" required><br>
+        
+        <input type="submit" value="Update Book" class="submit-button">
+        <a href="{{ url_for('books') }}" class="submit-button">Cancel</a>
     </form>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -20,6 +23,6 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-
 </section>
+
 {% endblock content %}
