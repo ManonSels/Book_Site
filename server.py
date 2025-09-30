@@ -115,7 +115,7 @@ def bookEdit(book_id):
 
 # ------------- DELETE ROUTE ------------- #
 
-@app.route('/bookDelete/<int:book_id>', methods=['POST'])
+@app.route('/bookDelete/<int:book_id>', methods=['POST', 'GET'])
 def bookDelete(book_id):
     try:
         with get_db() as connect:
@@ -137,6 +137,7 @@ def bookDelete(book_id):
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 
 # ------------- END ------------- #

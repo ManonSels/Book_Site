@@ -13,16 +13,6 @@
         <input type="submit" value="Update Book" class="submit-button">
         <a href="{{ url_for('books') }}" class="submit-button">Cancel</a>
     </form>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }} form-message">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
 </section>
 
 {% endblock content %}

@@ -10,16 +10,5 @@
         <input type="text" name="author" class="form-input" required><br>
         <input type="submit" value="Submit" class="submit-button">
     </form>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }} form-message">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
 </section>
 {% endblock content %}

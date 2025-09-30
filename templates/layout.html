@@ -26,6 +26,16 @@
 		</nav>
 	</header>
 
+	    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} form-message message-fadeout">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
 	<main>
 			<div>
 				{% block content %}{% endblock %}
