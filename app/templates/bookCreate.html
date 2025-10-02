@@ -3,7 +3,7 @@
 
 <h1>CREATE</h1>
 <section class="container">
-    <form action="{{ url_for('bookCreate') }}" method="POST" class="book-form">
+    <form action="{{ url_for('books.book_create') }}" method="POST" class="book-form">
         <label for="title">Title</label><br>
         <input type="text" name="title" class="form-input" required><br>
         <label for="author">Author</label><br>

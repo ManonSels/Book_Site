@@ -3,7 +3,7 @@
 
 <h1>EDIT BOOK</h1>
 <section class="container">
-    <form action="{{ url_for('bookEdit', book_id=book.id) }}" method="POST" class="book-form">
+    <form action="{{ url_for('books.book_edit', book_id=book.id) }}" method="POST" class="book-form">
         <label for="title">Title</label><br>
         <input type="text" name="title" class="form-input" value="{{ book.title }}" required><br>
         
@@ -11,7 +11,7 @@
         <input type="text" name="author" class="form-input" value="{{ book.author }}" required><br>
         
         <input type="submit" value="Update Book" class="submit-button">
-        <a href="{{ url_for('books') }}" class="submit-button">Cancel</a>
+        <a href="{{ url_for('books.books_list') }}" class="submit-button">Cancel</a>
     </form>
 </section>
 
