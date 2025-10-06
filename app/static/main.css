@@ -18,6 +18,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    color: inherit;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -114,7 +115,7 @@ tr:hover {
 
 
 
-/* -------------- EDIT AND DELETE BUTTONS -------------- */
+/* -------------- (EDIT AND DELETE) BUTTONS -------------- */
 
 .btn {
     padding: 4px 8px;
@@ -140,6 +141,20 @@ tr:hover {
     color: #000000;
 }
 
+/* removes ugly file input box */
+.file-input {
+    display: none;
+}
+
+label.btn.btn-edit {
+    color: white !important;
+}
+
+label.btn.btn-edit:hover {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(166, 189, 197);
+}
+
 .btn-delete {
     background-color: #272828;
     color: white;
@@ -147,7 +162,7 @@ tr:hover {
 }
 
 .btn-delete:hover {
-    background-color: rgb(153, 106, 97);
+    background-color: rgb(167, 101, 101);
     color: #000000;
 }
 
